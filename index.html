@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper-outer">
+        <div class="wrapper-inner">
+            <div class="content">
+                <div class="header block">
+                    <h1> Task List App</h1>
+                </div>
+                <div class="taskBlock block">
+                    <div class="addTask-wrapper">
+                        <div class="title">
+                            <h2>Новая задача</h2>
+                        </div>
+                        <form class="addForm">
+                            <input class="taskName-input" type="text" required>
+                            <input class="inputDateAdd" type="date" required>
+                            <button class="buttonAdd">+</button>
+                        </form>
+                    </div>
+                    <div class="title-wrapper">
+                        <div class="h2-wrapper">
+                            <h2>Текущие задачи</h2>
+                        </div>
+                        <div class="search">
+                            <form class="searchForm">
+                                <input class="searchForm__input" type="text">
+                                <div class="searchForm__startButton">
+                                    <img src="./img/icon/loupe.svg" width="30px" height="30px" alt="Поиск">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="taskList-wrapper">
+                        <ul>
+                            <li class="tackItem">
+                                <div class="removeTask-wrapper">
+                                    <button class="removeTask buttonTask">x</button>
+                                </div>
+                                <div class="taskText-wrapper">
+                                    <p class="taskText">Дописать приложение</p>
+                                </div>
+                                <div class="redactTask-wrapper">
+                                    <button class="redactTask buttonTask">Ред.</button>
+                                </div>
+                            </li>
+
+                        </ul> 
+                    </div>
+                </div>
+                
+        </div>
+        </div>
+    </div>
+</body>
+</html>
