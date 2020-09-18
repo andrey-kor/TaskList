@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/ico">
     <title>Task List</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
+</head> 
 <body>
     <div class="wrapper-outer">
         <div class="wrapper-inner">
@@ -19,20 +19,19 @@
                             <h2>Новая задача</h2>
                         </div>
                         <form class="addForm">
-                            <input class="taskName-input" type="text" required>
-                            <input class="inputDateAdd" type="date" required>
+                            <input class="inputTaskName" type="text" required>
+                            <input class="inputDate" type="date" required>
                             <button class="buttonAdd">+</button>
                         </form>
                     </div>
                     <div class="title-wrapper">
-                        <div class="h2-wrapper">
+                        <div class="title-wrapper__h2">
                             <h2>Текущие задачи</h2>
                         </div>
                         <div class="search">
                             <form class="searchForm">
                                 <input class="searchForm__input" type="text">
                                 <div class="searchForm__startButton">
-                                    <img src="./img/icon/loupe.svg" width="30px" height="30px" alt="Поиск">
                                 </div>
                             </form>
                         </div>
@@ -42,13 +41,15 @@
                         <ul>
                             <li class="tackItem">
                                 <div class="removeTask-wrapper">
-                                    <button class="removeTask buttonTask">x</button>
+                                    <button class="removeTaskButton buttonTask">x</button>
                                 </div>
-                                <div class="taskText-wrapper">
-                                    <p class="taskText">Дописать приложение</p>
+                                <div class="taskItemBody-wrapper">
+                                    <div class="taskId">1.</div>
+                                    <div class="taskText">Дописать приложение </div>
+                                    <div class="taskDate">12.11.2020</div>
                                 </div>
                                 <div class="redactTask-wrapper">
-                                    <button class="redactTask buttonTask">Ред.</button>
+                                    <button class="redactTaskButton buttonTask">Ред.</button>
                                 </div>
                             </li>
 

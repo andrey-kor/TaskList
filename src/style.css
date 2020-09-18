@@ -62,7 +62,7 @@ h2{
 
 }
 
-.h2-wrapper{
+.title-wrapper__h2{
 
 }
 
@@ -97,13 +97,13 @@ h2{
     height: 30px;
 }   
 
-.taskName-input{
+.inputTaskName{
     height: 23px;
     font-size: 16px;
     margin: 0 20px 0 0;
 }
 
-.inputDateAdd {
+.inputDate {
     height: 25px;
     font-size: 16px;
     margin: 0 20px 0 0;
@@ -154,8 +154,8 @@ h2{
 }
 
 .removeTask-wrapper{
-    /* height: 35px; */
     width: 35px;
+    margin: 0 10px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,7 +169,7 @@ h2{
 
 }
 
-.removeTask {     
+.removeTaskButton {     
     width: 30px;
     border: #f06a6a solid 2px;
     border-radius: 50%;
@@ -177,21 +177,37 @@ h2{
     font-size: 18px;
 }
 
-.removeTask:hover { 
+.removeTaskButton:hover { 
     background-color: #f06a6a;
     cursor: pointer;
 }
 
-.taskText-wrapper{
+.taskItemBody-wrapper{
     flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+}
+
+.taskId, .taskText, .taskDate {
+    font-size: 16px;
+    margin: 0 5px ;
+}
+
+.taskId{
+    flex: 0 0 auto;
 }
 
 .taskText{
-    font-size: 16px;
-    margin: 0 20px ;
-
+    flex: 1 1 auto;
 }
+
+.taskDate{
+    flex: 1 0 auto;
+}
+
+
 
 .redactTask-wrapper{
     width: 60px;
@@ -202,7 +218,8 @@ h2{
     flex: 0 0 auto;
 }
 
-.redactTask { 
+.redactTaskButton { 
+    margin: 0 0 0 10px;
     border: #f8d76a solid 2px;
     border-radius: 10px;
     background-color: #f8e7ae;
@@ -211,7 +228,7 @@ h2{
 
 }
 
-.redactTask:hover { 
+.redactTaskButton:hover { 
     background-color: #f8d76a;
     cursor: pointer;
 }
