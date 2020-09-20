@@ -1,30 +1,29 @@
 import CurrentDate from './CurrentDate'
+import ReverseDate from './ReverseDate'
 import TaskList from './TaskList'
 
 function AddTask(taskText, taskDate, tasks){
     
-    const errorMessage = document.createElement('p')
-    errorMessage.className = 'errorMessage'
-    errorMessage.innerHTML='Нельзя добавить прошедшую дату'
+    const errorMessage = document.querySelector('.errorMessage')
 
     function dateValidation(taskDate){
 
         const currentDate = CurrentDate()
 
         if (new Date(taskDate) >= new Date (currentDate)) {
-            errorMessage.remove()
+            errorMessage.style.display = 'none'
             return true
         }
         else {
-            addForm.after(errorMessage)
+            errorMessage.style.display = 'block'
             return false
         }
     }
 
     if (dateValidation(taskDate)){
-        // inputTaskName.value = ''
-        // inputDate.value = ''
         writeTask(taskText, taskDate)
+        document.querySelector('.inputTaskName').value = ''
+        document.querySelector('.inputDate').value = ''
     }      
     
     function writeTask(taskText, taskDate){
@@ -32,24 +31,14 @@ function AddTask(taskText, taskDate, tasks){
         const item = {
             id: tasks.length+1,
             text: taskText,
-            date: taskDate
+            date: ReverseDate(taskDate, true)
         }
 
         tasks.push(item)
         localStorage.setItem('tasks', JSON.stringify(tasks))
 
-        // sort(tasks)
         TaskList(tasks)
-
     }
 }
-
-// function sort(tasks){
-//     tasks.sort((a, b) => {
-//         console.log("a.id: ", a.id);
-//         console.log("b.id: ", b.id);
-//         a.id > b.id ? -1 : 1
-//     })
-// }
 
 export default AddTask

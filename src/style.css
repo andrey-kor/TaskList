@@ -6,7 +6,9 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+span{
+    max-width: 385px;
+}
 .wrapper-outer{
     display: flex;
     flex-direction: column;
@@ -19,7 +21,7 @@ body{
 }
 
 .content{
-    width: 700px;    
+    width: 710px;    
 }
 
 .header{
@@ -37,7 +39,6 @@ h1{
     border-radius: 20px;
     background: #e2ffca; 
 }
-
 
 .taskBlock{
 
@@ -59,8 +60,6 @@ h2{
     margin: 40px 0 20px 0;
     display: flex;
     justify-content: space-between;
-
-
 }
 
 .title-wrapper__h2{
@@ -87,10 +86,6 @@ h2{
 
 }
 
-.searchForm__startButton:hover { 
-    cursor: pointer;
-}
-
 .filter-wrapper { 
     margin: 5px 0;
     padding: 0 40px;
@@ -101,7 +96,7 @@ h2{
 }
 .filter__id { 
     flex: 0 0 auto;
-    padding: 0 20px;
+    padding: 0 20px 0 25px;
 }
 .filter__text { 
     flex: 1 1 auto;
@@ -116,10 +111,9 @@ h2{
 
 }
 .filter__date-img { 
-    padding: 0 0 0 30%;
-    /* display: block;
-    margin: 0 auto; */
+    padding: 0 0 0 100px;
 }
+
 .filter__id:hover,  .filter__text:hover, .filter__date:hover { 
     cursor: pointer;
 }
@@ -131,6 +125,7 @@ h2{
 }   
 
 .errorMessage{
+    display: none;
     color: red;
     font-size: 14px;
 }
@@ -145,8 +140,6 @@ h2{
     height: 25px;
     font-size: 16px;
     margin: 0 20px 0 0;
-
-
 }
 
 .buttonAdd{ 
@@ -166,7 +159,6 @@ h2{
     cursor: pointer;
 }
 
-
 .currentTasks-wrapper{ 
     margin: 50px 0 0 0;
 }
@@ -174,8 +166,6 @@ h2{
 .taskList-wrapper{
     padding: 5px 0;
     border-radius: 20px;
-
-    
     background-color: #ffffffab;
 }
 
@@ -208,7 +198,6 @@ h2{
     height: 30px;
     transition: .3s;
     outline: none;
-
 }
 
 .removeTaskButton {     
@@ -229,7 +218,6 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .taskId, .taskText, .taskDate {
@@ -238,20 +226,34 @@ h2{
 }
 
 .taskId{
-    flex: 0 0 auto;
+    flex: 0 1 auto;
 }
 
 .taskText{
     flex: 1 1 auto;
 }
 
-.taskDate{
-    flex: 0 0 auto;
-    padding: 0 100px 0 0;
+.redactInput{
+    height: 23px;
+    font-size: 16px;
+    margin: 0 10px 0 0;
 }
 
+.redactDate{
+    height: 25px;
+    font-size: 16px;
+    margin: 0 20px 0 0;
+}
 
+.redactButton{
+    height: 28px ;
+    font-size: 16px;
+}
 
+.taskDate{
+    width: 185px;
+    flex: 0 0 auto;
+}
 
 
 .redactTask-wrapper{
@@ -269,8 +271,6 @@ h2{
     border-radius: 10px;
     background-color: #f8e7ae;
     font-size: 16px;
-
-
 }
 
 .redactTaskButton:hover { 

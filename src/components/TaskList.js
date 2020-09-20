@@ -64,6 +64,7 @@ function TaskList (tasks, searchEl = [], searchOnFlag = false){
 
     const taskTextWrapper = document.createElement('div')
     taskTextWrapper.className = 'taskText'
+    taskTextWrapper.id = `taskText-${i}`
     taskIdWrapper.after(taskTextWrapper)
 
     const spanElementText = document.createElement('span')
@@ -72,6 +73,7 @@ function TaskList (tasks, searchEl = [], searchOnFlag = false){
 
     const taskDateWrapper = document.createElement('div') 
     taskDateWrapper.className = 'taskDate'
+    taskDateWrapper.id = `taskDate-${i}`
     taskTextWrapper.after(taskDateWrapper)
 
     const spanElementDate = document.createElement('span')
@@ -84,21 +86,21 @@ function TaskList (tasks, searchEl = [], searchOnFlag = false){
 
     const redactButton = document.createElement('button')
     redactButton.className = 'redactTaskButton buttonTask' 
-    redactButton.id = `rmButton-${i}`
+    redactButton.id = `rdButton-${i}`
     redactButton.innerHTML = 'Ред.'
     redactTaskWrapper.append(redactButton)
     redactButton.addEventListener('click', redactTask)
     }
     
     function rmTask(event){
-        const buttonId = event.target.id.match(/\d+$/)[0]
-        console.log('button id', buttonId);
-        RmTask(tasks, listForDisplay[+buttonId].id)
+        const rnButtonId = event.target.id.match(/\d+$/)[0]
+        RmTask(tasks, listForDisplay[+rnButtonId].id)
     }
 
     function redactTask(event){
-        const buttonId = event.target.id.match(/\d+$/)[0]
-        RedactTask(tasks, +buttonId)
+        const redactButtonId = event.target.id.match(/\d+$/)[0]
+        RedactTask(tasks, listForDisplay[+redactButtonId].id)
+
     }
 }
 

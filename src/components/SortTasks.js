@@ -1,4 +1,5 @@
 import TaskList from "./TaskList"
+import ReverseDate from './ReverseDate'
 
 function SortTasks(tasks){
 
@@ -52,7 +53,7 @@ function SortTasks(tasks){
             break;
             case '__date':
                 if (sortedByDateFlag === false){
-                    tasks.sort((a,b) => new Date(a.date) > new Date(b.date) ? 1 : -1)
+                    tasks.sort((a,b) => new Date(ReverseDate(a.date)) > new Date(ReverseDate(b.date)) ? 1 : -1)
                     sortedByDateFlag = true
                     
                 }
