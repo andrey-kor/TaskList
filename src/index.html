@@ -11,7 +11,7 @@
         <div class="wrapper-inner">
             <div class="content">
                 <div class="header block">
-                    <h1> Task List App</h1>
+                    <h1 lang="en"> Task List App</h1>
                 </div>
                 <div class="taskBlock block">
                     <div class="addTask-wrapper">
@@ -36,23 +36,21 @@
                             </form>
                         </div>
                     </div>
-                    
+                    <div class="filter-wrapper">
+                        <div class="filter__id">
+                            
+                        </div>
+                        <div class="filter__text">
+                            
+                        </div>
+                        <div class="filter__date">
+                            
+                        </div>
+                    </div>
                     <div class="taskList-wrapper">
-                        <ul>
-                            <li class="tackItem">
-                                <div class="removeTask-wrapper">
-                                    <button class="removeTaskButton buttonTask">x</button>
-                                </div>
-                                <div class="taskItemBody-wrapper">
-                                    <div class="taskId">1.</div>
-                                    <div class="taskText">Дописать приложение </div>
-                                    <div class="taskDate">12.11.2020</div>
-                                </div>
-                                <div class="redactTask-wrapper">
-                                    <button class="redactTaskButton buttonTask">Ред.</button>
-                                </div>
-                            </li>
-
+                        <p class="taskList__emptyMessage">Пока пусто. Вы можете добавить задачи</p>
+                        <p class="taskList__searchMessage">По данному условию записей не найдено</p>
+                        <ul id="ulTaskList">
                         </ul> 
                     </div>
                 </div>
